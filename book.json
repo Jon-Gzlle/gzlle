@@ -1,4 +1,7 @@
 {
+    "structure": {
+        "readme": "readme.md"
+    },
     "plugins": [ "theme-api","-livereload"],
     "pluginsConfig": {
         "theme-api": {
