@@ -1,0 +1,29 @@
+/* cite{
+	margin-top: -30px;
+	font-size:10px;
+	text-align: center;
+	color: #666;
+}
+
+.page-inner ul, .page-inner ol {
+	margin-bottom:15px !important;
+}
+
+small{
+	font-size:10px;
+}  */
+
+/* ul.summary li:first-child,
+ul.summary li:nth-child(2)*/
+ul.summary li:last-child,
+ul.summary li:nth-last-child(2){
+	display: none
+} 
+.book-header .pull-right{
+	display: none
+}
+.book-header .pull-right.dropdown,
+.book-header .pull-right.lang-switcher
+{
+	display:block
+} 

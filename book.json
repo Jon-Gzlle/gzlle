@@ -1,0 +1,19 @@
+{
+    "plugins": [ "theme-api","-livereload"],
+    "pluginsConfig": {
+        "theme-api": {
+            "theme": "dark",
+            "languages": [
+                {
+                    "lang": "java",
+                    "name": "Java",
+                    "default": true
+                },
+                {
+                    "lang": "c#",
+                    "name": "C#"
+                }
+            ]
+        }
+    }
+}
