@@ -1,15 +1,15 @@
 ### 接口规范：
----
-支持https协议通讯，全部使用post方式，utf-8编码，请求参数为queryString方式，返回值为json格式
+***
+协议：支持http和https协议。
+方式：按接口规定使用POST或GET方式，UTF-8格式编码
+参数：按接口规定传输QueryString或者Json字符串数据
 
-### 接口网关：
-正式环境：`https://openapi.gzlle.com `
-测试环境：`https://openapi-qa.gzlle.com `
-**请求方式：**
-- POST
+### 接口环境：
+版本：`v1.0`
+地址：`https://openapi.gzlle.com `
 
 ### 调用规则：
-- 请求过期时间：5分钟
+请求超时时间：0
 - 调用周期：60秒
 - 一个调用周期内，最大可调用次数：200
 
