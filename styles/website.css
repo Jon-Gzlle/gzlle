@@ -15,10 +15,18 @@ small{
 
 /* ul.summary li:first-child,
 ul.summary li:nth-child(2)*/
-ul.summary li:last-child,
+/* ul.summary li:last-child,
 ul.summary li:nth-last-child(2){
 	display: none
-} 
+}  */
+ul.summary li.divider{
+	margin:10px 20px !important;
+	background:rgba(0,0,0,.01);
+	opacity:0;
+}
+ul.summary li .gitbook-link{
+	display: none!important;
+}
 .book-header .pull-right{
 	display: none
 }
