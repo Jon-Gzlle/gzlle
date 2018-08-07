@@ -1,110 +1,52 @@
-### 接口规范：
+### 获取access_token
 ***
-协议：支持http和https协议。
-方式：按接口规定使用POST或GET方式，UTF-8格式编码
-参数：按接口规定传输QueryString或者Json字符串数据
+access_token是Gzlle API的全局唯一接口调用凭据，Gzlle API调用各接口时都需使用access_token。开发者需要进行妥善保存。access_token的存储至少要保留512个字符空间。access_token的有效期目前为2个小时，需定时刷新，重复获取将导致上次获取的access_token失效。
 
-### 接口环境：
-版本：`v1.0`
-地址：`https://openapi.gzlle.com `
+###### Gzlle API调用所需的access_token的使用及生成方式说明：
 
-### 调用规则：
-请求超时时间：0
-- 调用周期：60秒
-- 一个调用周期内，最大可调用次数：200
+1、建议开发者使用中控服务器统一获取和刷新access_token，其他业务逻辑服务器所使用的access_token均来自于该中控服务器，不应该各自去刷新，否则容易造成冲突，导致access_token覆盖而影响业务；
 
-### 共通的输入输出参数定义：
-输入参数
+2、目前access_token的有效期通过返回的expire_in来传达，默认是7200秒之内的值。中控服务器需要根据这个有效时间提前去刷新access_token 来访问接口；
 
-|参数名|必选|类型|描述|长度范围|
-|:---- |:---|:----- |:----- |----- |
-|appKey |是 |string |开发者唯一标识 ||
-|nonce |是 |string | 随机数，请每次随机产生，保证随机数不可预测 |不大于32位|
-|timestamp |是 |string | 当前毫秒时间戳| |
-|sign |是 |string | 签名 |见备注|
+3、access_token的有效时间可能会在未来有调整，所以中控服务器不仅需要内部定时主动刷新，还需要提供被动刷新access_token的接口，这样便于业务服务器在API调用获知access_token已超时的情况下，可以触发access_token的刷新流程。
 
-{% method %}
-### 签名生成的通用步骤如下：
-第一步，设所有发送或者接收到的数据为集合M，将集合M内非空参数值的参数按照参数名ASCII码从小到大排序（字典序），使用URL键值对的格式（即key1=value1&key2=value2…）拼接成字符串stringA。
-第二步，在stringA最后拼接上appSecret得到stringSignTemp字符串，并对stringSignTemp进行MD5运算，再将得到的字符串所有字符转换为大写，得到sign值signValue。
+AppKey 和AppSecret ，可以在管理平台的「企业面板」->「开发参数」内进行操作（需要已经成为开发者，且帐号没有异常状态）。调用接口时，请登录“开放管理平台-企业面板-开发参数”提前将服务器IP地址添加到IP白名单中，防止被Gzlle API服务器拒绝请求。
 
-假设传递的参数如下：
-appKey: gmd930ea5d5a258f4f
-nonce: 76e71d31590d44f2aaa55fed6b3e267c
-timestamp: 1490063145767
-processNum: wi123456789
+###### 接口调用请求说明
 
-第一步：对参数按照key=value的格式，并按照参数名ASCII字典序排序如下：
-stringA="appKey=gmd930ea5d5a258f4f&nonce=76e71d31590d44f2aaa55fed6b3e267c&processNum=wi123456789&timestamp=1490059287869";
+https请求方式: GET
+https://openapi.gzlle.com/token?grant_type=client_credential&appkey=AppKey&secret=AppSecret
+**参数说明**
 
-第二步：拼接API密钥：
-stringSignTemp="stringA&appSecret=192006250b4c09247ec02edce69f6a2d"
-sign=MD5(stringSignTemp).toUpperCase()="93E1D6AF003B1061DF01CEB93523F142"
+|参数    |是否必须|    说明
+|:----    |:-------    
+|grant_type	|是	|获取access_token填写client_credential
+|appkey	|是	|API使用者身份凭证
+|secret	|是	|API使用者凭证密钥，即AppSecret
 
-输出参数:
+**返回说明**
 
-|参数名|类型|描述|
-|:---- |:---|:----- |----- |
-|success |boolean |业务请求是否成功(true:成功,false:失败) |
-|errorCode |string |返回错误码(success为true时为空) |
-|errorMsg |string | 返回错误消息(success为true时为空) |
-|data |Object | 返回数据(success为false时为空) |
+正常情况下，API会返回下述JSON数据包：
 
-{% sample lang="java" %}
-** 签名代码示例(JAVA)：**
+{"access_token":"ACCESS_TOKEN","expires_in":7200}
 
-```java
-public class SignUtil {
-    public static final String APPKEY = "appKey";
-    public static final String APPSECRET = "appSecret";
-    public static final String NONCE = "nonce";
-    public static final String TIMESTAMP = "timestamp";
-    public static final String SIGN = "sign";
-    /**
-     * 获取签名
-     * @param paramMap 包含业务参数，和appKey,nonce,timestamp这3个公共参数
-     * @param appSecret
-     * @return
-     */
-    public static String getSign(Map<String, Object> paramMap, String appSecret) {
-        String text = getUrlText(paramMap);
-        text += "&appSecret=" + appSecret;
-        return MD5SHA256Util.md5(text).toUpperCase();
-    }
-    private static String getUrlText(Map<String, Object> beanMap) {
-        beanMap = getSortedMap(beanMap);
-        StringBuilder builder = new StringBuilder();
-        for (String key : beanMap.keySet()) {
-            String value = beanMap.get(key).toString();
-            builder.append(key);
-            builder.append('=');
-            builder.append(value);
-            builder.append('&');
-        }
-        String text = builder.toString();
-        return text.substring(0, text.length() - 1);
-    }
-    /**
-     *  对普通map进行排序
-     * @param paramMap
-     * @return
-     */
-    private static Map<String, Object> getSortedMap(Map<String, Object> paramMap) {
-        SortedMap<String, Object> map = new TreeMap<String, Object>();
-        for (String key : paramMap.keySet()) {
-            if (key != null && !APPSECRET.equals(key)) {
-                Object value = paramMap.get(key);
-                if (value != null) {
-                    String valueStr = String.valueOf(value);
-                    if (valueStr != null && !"".equals(valueStr)) {
-                        map.put(key, value);
-                    }
-                }
-            }
-        }
-        return map;
-    }
-}
-```
-{% endmethod %}
+**参数说明**
+
+|参数	        |说明
+|:----        |:----
+|access_token	|获取到的凭证
+|expires_in	|凭证有效时间，单位：秒
+错误时API会返回错误码等信息，JSON数据包示例如下（该示例为AppKey无效错误）:
+
+{"error":40013,"errmsg":"invalid appid"}
+**错误说明**
+Ping++ API 使用 HTTP 状态码 (status code) 来表明一个 API 请求的成功或失败状态。返回 HTTP 2XX 表明 API 请求成功。返回 HTTP 4XX 表明在请求 API 时提供了错误信息，例如参数缺失、参数错误、支付渠道错误等。返回 HTTP 5XX 表明 API 请求时，Ping++ 服务器发生了错误。
+
+|返回码	    |说明
+|:----     |:----
+-1	系统繁忙，此时请开发者稍候再试
+0	请求成功
+40001	AppSecret错误或者AppSecret不属于这个公众号，请开发者确认AppSecret的正确性
+40002	请确保grant_type字段值为client_credential
+40164	调用接口的IP地址不在白名单中，请在接口IP白名单中进行设置。（小程序及小游戏调用不要求IP地址在白名单内。）
 

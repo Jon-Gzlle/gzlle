@@ -1,11 +1,10 @@
 # Summary
 
 * [概述](README.md)
-* [接口规范](ji-chu/jie-kou-gui-fan.md)
-* [结果代码](ji-chu/ye-wu-dai-ma.md)
-* [异常代码](ji-chu/yi-chang-dai-ma.md)
+* [获取Access\_token](ji-chu/jie-kou-gui-fan.md)
 
 ## 电签合同
+
 * [接入指南](dian-qian-he-tong/jie-ru-zhi-nan.md)
 * [查询电签结果](dian-qian-he-tong/cha-xun-dian-qian-jie-guo.md)
 * [回调电签结果](dian-qian-he-tong/hui-diao-dian-qian-jie-guo.md)
@@ -20,3 +19,4 @@
 * [提现历史记录](ti-xian-li-shi-ji-lu.md)
 * [查询单笔提现结果](shi-shi-ti-xian/cha-xun-ti-xian-jie-guo.md)
 * [回调提现结果](shi-shi-ti-xian/ti-xian-jie-guo-hui-diao.md)
+
