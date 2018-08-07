@@ -36,17 +36,15 @@ https://openapi.gzlle.com/token?grant_type=client_credential&appkey=AppKey&secre
 |:----        |:----
 |access_token	|获取到的凭证
 |expires_in	|凭证有效时间，单位：秒
-错误时API会返回错误码等信息，JSON数据包示例如下（该示例为AppKey无效错误）:
 
-{"error":40013,"errmsg":"invalid appid"}
+错误时API会返回HttpStatusCode错误码和错误JSON数据包示例如下（该示例为AppKey无效错误）:
+
+{"error":"NotFound,"message":"invalid AppKey"}
 **错误说明**
-Ping++ API 使用 HTTP 状态码 (status code) 来表明一个 API 请求的成功或失败状态。返回 HTTP 2XX 表明 API 请求成功。返回 HTTP 4XX 表明在请求 API 时提供了错误信息，例如参数缺失、参数错误、支付渠道错误等。返回 HTTP 5XX 表明 API 请求时，Ping++ 服务器发生了错误。
 
-|返回码	    |说明
-|:----     |:----
--1	系统繁忙，此时请开发者稍候再试
-0	请求成功
-40001	AppSecret错误或者AppSecret不属于这个公众号，请开发者确认AppSecret的正确性
-40002	请确保grant_type字段值为client_credential
-40164	调用接口的IP地址不在白名单中，请在接口IP白名单中进行设置。（小程序及小游戏调用不要求IP地址在白名单内。）
+
+|错误码	    |说明
+|:----       |:----
+|error	     |错误代码，业务系统返回的错误
+|message     |错误的具体信息说明
 

@@ -30,5 +30,5 @@ Gzlle API 使用 HTTP 状态码 (status code) 来表明一个 API 请求的成�
 |404-NotFound      |未找到目标对象
 |408-RequestTimeout|请求超时
 |409-Conflict      |指令冲突，主键冲突,目标已经存在
-    ExpiredVersion(480,"版本过期，程序过期，API过期"),
-    ExistUndo(481,"存在未处理的事项");
+|480-ExpiredVersion|版本过期，程序过期，API过期
+|481-ExistUndo     |存在未处理的事项
