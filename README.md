@@ -7,7 +7,7 @@
 
 调用凭据：Gzlle API使用access_token为接口调用凭据,来调用接口，所有接口的调用需要先获取access_token，access_token在2小时内有效，过期需要重新获取，但1天内获取次数有限，开发者需自行存储，详见"获取access_token章节"。
 
-身份标识：获取 access_token 需要 AppKey 和AppSecret，你可以在管理平台内管理。AppKey 和AppSecret 是企业在Gzlle API中的身份标识，请安全存储，确保其不要被泄露。如需获取或更新 AppKey 和AppSecret ，可以在管理平台的「企业面板」->「开发参数」内进行操作。
+身份标识：获取 access_token 需要 AppKey 和AppSecret，你可以在管理平台内管理。AppKey 和AppSecret 是企业在Gzlle API中的身份标识，请安全存储，确保其不要被泄露。如需获取或更新 AppKey 和AppSecret ，可以在管理平台的「系统设置」->「开发参数」内进行操作。
 
 #### 环境
 
