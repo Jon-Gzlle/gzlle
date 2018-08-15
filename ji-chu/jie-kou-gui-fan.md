@@ -15,7 +15,7 @@ AppKey 和AppSecret ，可以在管理平台的「企业面板」->「开发参�
 ###### 接口调用请求说明
 
 https请求方式: GET
-https://openapi.gzlle.com/token?grant_type=client_credential&appkey=AppKey&secret=AppSecret
+`/token?grant_type=client_credential&appkey=AppKey&secret=AppSecret`
 **参数说明**
 
 |参数    |是否必须|    说明
@@ -28,7 +28,7 @@ https://openapi.gzlle.com/token?grant_type=client_credential&appkey=AppKey&secre
 
 正常情况下，API会返回下述JSON数据包：
 
-{"access_token":"ACCESS_TOKEN","expires_in":7200}
+`{"access_token":"ACCESS_TOKEN","expires_in":7200}`
 
 **参数说明**
 
@@ -39,7 +39,8 @@ https://openapi.gzlle.com/token?grant_type=client_credential&appkey=AppKey&secre
 
 错误时API会返回HttpStatusCode错误码和错误JSON数据包示例如下（该示例为AppKey无效错误）:
 
-{"error":"NotFound,"message":"invalid AppKey"}
+`{"error":"NotFound,"message":"invalid AppKey"}`
+
 **错误说明**
 
 
@@ -47,4 +48,5 @@ https://openapi.gzlle.com/token?grant_type=client_credential&appkey=AppKey&secre
 |:----       |:----
 |error	     |错误代码，业务系统返回的错误
 |message     |错误的具体信息说明
+
 

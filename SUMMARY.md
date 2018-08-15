@@ -10,5 +10,3 @@
 * [回调电签结果](dian-qian-he-tong/hui-diao-dian-qian-jie-guo.md)
 * [支持银行](zhi-chi-de-yin-xing-lie-biao.md)
 
-## 实时提现
-
