@@ -14,8 +14,14 @@ AppKey 和AppSecret ，可以在管理平台的「企业面板」->「开发参�
 
 ###### 接口调用请求说明
 
-https请求方式: GET
-`/token?grant_type=client_credential&appkey=AppKey&secret=AppSecret`
+请求地址：
+
+
+```
+HTTPS GET/POST  
+https://openapi.gzlle.com/token?grant_type=client_credential&appkey=AppKey&secret=AppSecret
+```
+
 **参数说明**
 
 |参数    |是否必须|    说明

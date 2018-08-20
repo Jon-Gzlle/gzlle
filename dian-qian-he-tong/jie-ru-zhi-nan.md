@@ -1,4 +1,4 @@
-### 电子合同接入指南
+### 业务签约接入指南
 ***
 ##### 电子合同介绍
 
@@ -16,25 +16,17 @@
 企业可以将Gzlle.com定制生成的电子合同链接地址嵌入到自有的产品流程中，传入电子合同所需参数，直接进入合同信息采集页面，员工确认无误后，进行合同签署。
 
 ##### 申请订单：
-```
-POST /contracts/add 
 
+```
+接口地址
+POST '/contracts/add'
+http headers 包含:
 Authorization: Bearer [access_token]
-```
-
-
 
 ```
-POST 
-接口地址 `/contracts/add`
-
-
-
-```
-
-
 
 **参数说明**
+
 |参数    |是否必须|    说明
 |:----    |:-------    
 |name       |是 |姓名
@@ -47,7 +39,7 @@ POST
 |remarks    |否 |附言，回调原文返回，建议JSON格式。
 
 ##### 拼接链接：
-加密后链接格式：
+加密后链接示例格式：
 `https://openapi.gzlle.com/contract/sign.html?appkey=[AppKey]&data=[加密字段]`
 
 参数说明：
