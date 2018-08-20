@@ -18,26 +18,30 @@
 
 ##### 申请订单：
 
-```
-接口地址
-POST '/contracts/add'
-http headers 包含:
-Authorization: Bearer [access_token]
+**请求地址**
 
+```
+-- HTTPS POST|GET --
+https://openapi.gzlle.com/contracts/add
 ```
 
 **参数说明**
 
-|参数    |是否必须|    说明
-|:----    |:-------    
-|name       |是 |姓名
-|phone      |是 |登记手机号     
-|papersType |是 |证件类型 1:身份证
-|papersNo   |是 |API使用者凭证密钥，即AppSecret
-|bankNo     |是 |银行卡号
-|bankPhone  |否 |银行预留手机号
-|jobNo      |否 |工号
-|remarks    |否 |附言，回调原文返回，建议JSON格式。
+|参数    |类型   |是否必须|    说明
+|:----   |:-----|:-------    
+|name       |string|是 |姓名
+|phone      |string|是 |登记手机号     
+|papersType |int|是 |证件类型 1:身份证
+|papersNo   |string|是 |API使用者凭证密钥，即AppSecret
+|bankNo     |string|是 |银行卡号
+|bankPhone  |string|否 |银行预留手机号
+|jobNo      |string|否 |工号
+|extra    |string|否 |扩展参数，回调时原文返回，建议JsonString格式。
+|sign
+
+**响应参数**
+|
+
 
 ##### 拼接链接：
 加密后链接示例格式：
