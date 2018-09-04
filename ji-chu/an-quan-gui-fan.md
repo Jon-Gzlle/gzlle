@@ -18,7 +18,7 @@
 例如下面的请求参数示例(仅为示例)，开发者参考格式即可：
 ```
 appid：	wxd930ea5d5a258f4f
-mch_id：10000100
+money：10000100
 device_info： 1000
 content：{"button":[{"action":"HFCZ"},{"action":"KDTC"}]}
 nonce_str：ibuaiVcKdpRxkhJA
@@ -26,29 +26,47 @@ nonce_str：ibuaiVcKdpRxkhJA
 拼接完成的待签名字符串：
 
 ```
-stringA="appid=wxd930ea5d5a258f4f&content={"button":[{"action":"HFCZ"},{"action":"KDTC"}]}&device_info=1000&mch_id=10000100&nonce_str=ibuaiVcKdpRxkhJA"
+stringA="appid=wxd930ea5d5a258f4f&content={"button":[{"action":"HFCZ"},{"action":"KDTC"}]}&device_info=1000&money=10000100&nonce_str=ibuaiVcKdpRxkhJA"
 ```
 
-**2.拼接KEY值**，在stringA最后拼接上key得到stringSignTemp字符串。
-
-
-
-
-并对stringSignTemp进行MD5运算，再将得到的字符串所有字符转换为大写，得到sign值signValue。
-
-**举例：**
-
-假设传送的参数如下：
+**2.拼接KEY值**，在stringA最后拼接上key得到stringSignTemp字符串，注意key为商户平台设置的密钥AppKey。
 
 ```
-appid：	wxd930ea5d5a258f4f
-mch_id：10000100
-device_info： 1000
-body：{"button":[{"action":"HFCZ"},{"action":"KDTC"}]}
-nonce_str：ibuaiVcKdpRxkhJA
+stringSignTemp="appid=wxd930ea5d5a258f4f&content={"button":[{"action":"HFCZ"},{"action":"KDTC"}]}&device_info=1000&mch_id=10000100&nonce_str=ibuaiVcKdpRxkhJA&key=192006250b4c09247ec02edce69f6a2d" 
 ```
-第一步：对参数按照key=value的格式，并按照参数名ASCII字典序排序如下：
+
+**3.调用签名函数**，对stringSignTemp进行HMAC-SHA256运算，再将得到的字符串所有字符转换为大写，得到sign值signValue。
 
 ```
-stringA="appid=wxd930ea5d5a258f4f&body=test&device_info=1000&mch_id=10000100&nonce_str=ibuaiVcKdpRxkhJA";
+signValue=hash_hmac("sha256",stringSignTemp,key).toUpperCase()="6A9AE1657590FD6257D693A078E1C3E4BB6BA4DC30B23E0EE2496E54170DACD6" 
+```
+
+**4.生成请求参数**，将获得的签名字符串加入参数列表中，获得最终发送到API的数据:
+
+```
+{
+  "appid":"wxd930ea5d5a258f4f",
+  "money"：10000100,
+  "device_info": "1000",
+  "content："{\"button\":[{\"action\":\"HFCZ\"},{\"action\":\"KDTC\"}]}",
+  "nonce"："ibuaiVcKdpRxkhJA",
+  "sign":"6A9AE1657590FD6257D693A078E1C3E4BB6BA4DC30B23E0EE2496E54170DACD6"
+}
+```
+**生成随机数算法**
+微信支付API接口协议中包含字段nonce字符串，主要保证签名不可预测。我们推荐生成随机数算法如下：调用随机数函数生成，将得到的值转换为字符串。
+
+随机数算法举例，各语言平台可以自行设计随机数算法：
+```
+public static String buildNonce(int length)
+{
+    String charts = "ABCDEFGHJKLMNPQRSTUVWXYZabcdefghjkmnpqrstuvwxyz0123456789";
+    int max = charts.length;
+    String nonce = "";
+    for(i = 0; i < length; i++)
+    {
+        noncestr += charts[Math.random(0, max)];
+    } 
+    return nonce;
+}
 ```
