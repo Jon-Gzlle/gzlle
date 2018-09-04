@@ -1,6 +1,7 @@
 # Summary
 
 * [概述](README.md)
+* [参数规定](ji-chu/can-shu-gui-ding.md)
 * [安全规范](ji-chu/an-quan-gui-fan.md)
 * [获取access\_token](ji-chu/jie-kou-gui-fan.md)
 

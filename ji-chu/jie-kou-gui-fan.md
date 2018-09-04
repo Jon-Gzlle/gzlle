@@ -25,7 +25,7 @@ Authorization: Bearer [access_token]
 **请求地址**
 
 ```
--- HTTPS POST|GET --
+-- HTTPS POST --
 https://openapi.gzlle.com/token?grant_type=client_credential&appkey=AppKey&secret=AppSecret
 ```
 
@@ -41,7 +41,7 @@ https://openapi.gzlle.com/token?grant_type=client_credential&appkey=AppKey&secre
 
 正常情况下，API会返回下述JSON数据包：
 
-`{"access_token":"ACCESS_TOKEN","expires_in":7200}`
+`{"access_token":"[ACCESS_TOKEN]","expires_in":7200}`
 
 **响应参数**
 
