@@ -36,7 +36,7 @@ https://openapi.gzlle.com/contracts/add
 | phone | string | 是 | 登记手机号 |
 | papersType | int | 否 | 证件类型 1:身份证 |
 | papersNo | string | 否 | API使用者凭证密钥，即AppSecret |
-| bankNo | string | 是 | 银行卡号 |
+| bankCardNo | string | 是 | 银行卡号 |
 | bankPhone | string | 否 | 银行预留手机号 |
 | jobNo | string | 否 | 工号 |
 | extra | string | 否 | 扩展参数，回调时原文返回，建议JsonString格式。 |
