@@ -8,17 +8,17 @@
 
 **请求URL：**
 
-* /[contracts/getContractStatus](https://contract-qa.gzlle.com/api/employee/getContractStatus)
+* /contracts/getContractStatus/{id}
 
 **请求方式：**
 
-* POST 
+* GET 
 
 **参数：**
 
 | 参数名 | 必选 | 类型 | 说明 |
 | :--- | :--- | :--- | --- |
-| mobile | 是 | string | 手机号 |
+| id | 是 | string | 自然人id,由 |
 | name | 是 | string | 姓名 |
 | identity | 是 | string | 身份证号 |
 
