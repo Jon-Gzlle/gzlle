@@ -18,9 +18,7 @@
 
 | 参数名 | 必选 | 类型 | 说明 |
 | :--- | :--- | :--- | --- |
-| id | 是 | string | 自然人id,由 |
-| name | 是 | string | 姓名 |
-| identity | 是 | string | 身份证号 |
+| id | 是 | string | 自然人id,在下单接口中获取 |
 
 **返回参数说明**
 
@@ -29,6 +27,7 @@
 | success | boolean | 请求结果，true：成功；false：失败 |
 | errorCode | string | 错误码 |
 | errorMsg | string | 失败原因 |
+| status | int | 0未签 1已签 2签署中 |
 
 **返回示例**
 

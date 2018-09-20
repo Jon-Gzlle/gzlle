@@ -18,12 +18,10 @@
 
 | 参数名 | 必选 | 类型 | 说明 |
 | :--- | :--- | :--- | --- |
-| name | 是 | string | 姓名 |
-| mobile | 是 | string | 手机号 |
-| identity | 是 | string | 身份证号码 |
+| id | 是 | string | 自然人id,在下单接口中获取 |
 | status | 是 | string | 合同状态 |
-| workNumber | 否 | string | 工号 |
-| extraParam | 否 | string | 附言参数，由传入方提供，回调时将原样返还，可以用来做用户数据标识 |
+| employeeNo | 否 | string | 自然人编号 |
+| extra | 否 | string | 附言参数，由传入方提供，回调时将原样返还，可以用来做用户数据标识 |
 
 **返回参数说明**
 
