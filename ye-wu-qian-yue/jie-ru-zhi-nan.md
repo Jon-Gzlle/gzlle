@@ -28,7 +28,7 @@
 https://openapi.gzlle.com/contracts/add
 ```
 
-**参数说明**
+请求**参数说明**
 
 | 参数 | 类型 | 是否必须 | 说明 |
 | :--- | :--- | :--- | :--- |
@@ -43,27 +43,19 @@ https://openapi.gzlle.com/contracts/add
 | nonce | string | 是 | 随机字符串，长度要求在32位以内。[推荐随机数生成算法](/ji-chu/an-quan-gui-fan.md) |
 | sign | string | 是 | 通过签名算法计算得出的签名值，详见[签名生成算法](/ji-chu/an-quan-gui-fan.md) |
 
-**响应参数**  
-\|
+**返回结果示例**
 
-##### 拼接链接：
+```
+{"id":"212975255214358528"}
+```
 
-加密后链接示例格式：  
-`https://openapi.gzlle.com/contract/sign.html?appkey=[AppKey]&data=[加密字段]`
+**响应参数说明**
 
-参数说明：
+| 参数 | 类型 | 说明 |
+| :--- | :--- | :--- |
+| id | string | 返回该员工在系统唯一编号,该值需要调用方保存, 查询签约结果，签约结果回调都会需要该值. |
 
-| 参数名 | 是否必须 | 类型 | 说明 |
-| :--- | :--- | :--- | --- |
-| name | 是 | string | 姓名 |
-| phone | 是 | string | 手机号 |
-| papersType | 是 | string | 证件类型 1:身份证 |
-| papersNo | 是 | string | 证件号 |
-| bankNo | 是 | string | 银行卡号 |
-| bankName | 否 | string | 银行名称 |
-| bankPhone | 否 | string | 银行预留手机号 |
-| jobNo | 否 | string | 工号，可作为用户唯一标识 |
-| remarks | 否 | string | 附言，回调时返回原文。建议Json String格式 |
+
 
 
 

@@ -8,7 +8,7 @@
 
 **请求URL：**
 
-* /[api/employee/getContractStatus](https://contract-qa.gzlle.com/api/employee/getContractStatus)
+* /[contracts/getContractStatus](https://contract-qa.gzlle.com/api/employee/getContractStatus)
 
 **请求方式：**
 
