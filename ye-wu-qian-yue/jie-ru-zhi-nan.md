@@ -53,7 +53,8 @@ https://openapi.gzlle.com/contracts/employees/add
 
 | 参数 | 类型 | 说明 |
 | :--- | :--- | :--- |
-| id | string | 返回该自然人在工资来了平台唯一编号,该值需要调用方保存, 查询签约结果，签约结果回调都会需要该值. |
+| employeeId | string | 返回该自然人在工资来了平台唯一编号,该值需要调用方保存, 查询签约结果，签约结果回调都会需要该值.ex |
+| extra | string | 扩展参数，回调时原文返回，建议JsonString格式 |
 
 
 
