@@ -46,7 +46,17 @@ https://openapi.gzlle.com/contracts/employees/add
 **返回结果示例**
 
 ```
-{"id":"212975255214358528"}
+成功示例
+{
+    "extra": "string",
+    "employeeId": "12345678"
+}
+
+失败示例
+{
+    "error": "BadRequest",
+    "message": "手机号码格式有误,"
+}
 ```
 
 **响应参数说明**
