@@ -8,7 +8,7 @@
 
 **请求URL：**
 
-* /contracts/getContractStatus/{id}
+* /contracts/employees/status/{employeeId}
 
 **请求方式：**
 
@@ -18,7 +18,7 @@
 
 | 参数名 | 必选 | 类型 | 说明 |
 | :--- | :--- | :--- | --- |
-| id | 是 | string | 自然人id,在下单接口中获取 |
+| employeeId | 是 | string | 自然人id,在下单接口中获取 |
 
 **返回参数说明**
 
@@ -33,7 +33,7 @@
 
 ```
  {
-    “success”：true
+    “status”：1
  }
 ```
 
