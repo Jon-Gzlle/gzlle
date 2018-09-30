@@ -30,7 +30,7 @@ Authorization: Bearer [accessToken]
 -- HTTPS POST --
 https://openapi.gzlle.com/token
 
-{"grantType":"client_credential","appkey":"[appkey]","appSecret":"[appSecret]"}
+{"grantType":"client_credentials","appKey":"[appKey]","appSecret":"[appSecret]"}
 ```
 
 **参数说明**
