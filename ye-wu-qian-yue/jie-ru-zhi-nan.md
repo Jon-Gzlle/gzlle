@@ -25,7 +25,7 @@
 
 ```
 -- HTTPS POST --
-https://openapi.gzlle.com/contracts/add
+https://openapi.gzlle.com/contracts/employees/add
 ```
 
 请求**参数说明**
