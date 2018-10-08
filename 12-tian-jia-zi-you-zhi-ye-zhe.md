@@ -1,11 +1,20 @@
-##### 添加自由职业者：
+### 添加自由职业者
 
-**请求地址**
+---
 
-```
--- HTTPS POST --
-https://openapi.gzlle.com/contracts/employees/add
-```
+**简要描述：**
+
+* 添加自由职业者
+
+**请求URL：**
+
+* /contracts/employees/add
+
+**请求方式：**
+
+* POST 
+
+**参数：**
 
 请求**参数说明**
 
