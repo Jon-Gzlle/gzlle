@@ -39,10 +39,10 @@ stringA="appid=wxd930ea5d5a258f4f&content={"button":[{"action":"HFCZ"},{"action"
 stringSignTemp="appid=wxd930ea5d5a258f4f&content={"button":[{"action":"HFCZ"},{"action":"KDTC"}]}&device_info=1000&mch_id=10000100&nonce_str=ibuaiVcKdpRxkhJA&key=192006250b4c09247ec02edce69f6a2d"
 ```
 
-**3.调用签名函数**，对stringSignTemp进行MD5运算，再将得到的字符串所有字符转换为大写，得到sign值signValue。
+**3.调用签名函数**，对stringSignTemp进行HMAC-SHA256运算，再将得到的字符串所有字符转换为大写，得到sign值signValue。
 
 ```
-signValue=MD5(stringSignTemp).toUpperCase()="9A0A8659F005D6984697E2CA0A9CF3B7"
+signValue=hash_hmac("sha256",stringSignTemp,key).toUpperCase()="6A9AE1657590FD6257D693A078E1C3E4BB6BA4DC30B23E0EE2496E54170DACD6"
 ```
 
 **4.生成请求参数**，将获得的签名字符串加入参数列表中，获得最终发送到API的数据:
@@ -54,7 +54,7 @@ signValue=MD5(stringSignTemp).toUpperCase()="9A0A8659F005D6984697E2CA0A9CF3B7"
   "device_info": "1000",
   "content："{\"button\":[{\"action\":\"HFCZ\"},{\"action\":\"KDTC\"}]}",
   "nonce"："ibuaiVcKdpRxkhJA",
-  "sign":"9A0A8659F005D6984697E2CA0A9CF3B7"
+  "sign":"6A9AE1657590FD6257D693A078E1C3E4BB6BA4DC30B23E0EE2496E54170DACD6"
 }
 ```
 
