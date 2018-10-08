@@ -8,7 +8,8 @@
 ## 一 业务签约
 
 * [1.1 接入指南](ye-wu-qian-yue/jie-ru-zhi-nan.md)
-* [1.2 查询签约结果](ye-wu-qian-yue/cha-xun-qian-yue-jie-guo.md)
-* [1.3 回调签约结果](ye-wu-qian-yue/hui-diao-qian-yue-jie-guo.md)
+* [1.2 添加自由职业者](12-tian-jia-zi-you-zhi-ye-zhe.md)
+* [1.3 查询签约结果](ye-wu-qian-yue/cha-xun-qian-yue-jie-guo.md)
+* [1.4 回调签约结果](ye-wu-qian-yue/hui-diao-qian-yue-jie-guo.md)
 * [1.4 支持银行](ye-wu-qian-yue/zhi-chi-de-yin-xing-lie-biao.md)
 
