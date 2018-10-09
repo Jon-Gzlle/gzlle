@@ -12,7 +12,7 @@ accessToken是Gzlle API的全局唯一接口调用凭据，Gzlle API调用各接
 
 3、accessToken的有效时间可能会在未来有调整，所以中控服务器不仅需要内部定时主动刷新，还需要提供被动刷新accessToken的接口，这样便于业务服务器在API调用获知accessToken已超时的情况下，可以触发accessToken的刷新流程。
 
-AppKey 和AppSecret ，可以在可以在管理平台的「系统设置」-&gt;「开发参数」内进行操作（需要已经成为开发者，且帐号没有异常状态）。调用接口时，请登录“管理平台-系统设置-开发参数”提前将服务器IP地址添加到IP白名单中，防止被Gzlle API服务器拒绝请求。
+AppKey 和AppSecret ，可以在可以在管理平台的【系统设置】--&gt;【公司设置】--&gt;【开发者配置】内进行操作（需要已经成为开发者，且帐号没有异常状态）。调用接口时，请登录“管理平台-系统设置-开发参数”提前将服务器IP地址添加到IP白名单中，防止被Gzlle API服务器拒绝请求。
 
 **使用说明**  
 将获取到的 accessToken （JWT [https://jwt.io/](https://jwt.io/) ）加入请求头\(Http headers\)中作为公共参数附带传输至应用API接口来使用。headers认证字段格式如下
