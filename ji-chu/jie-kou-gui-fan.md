@@ -19,7 +19,7 @@ AppKey 和AppSecret ，可以在可以在管理平台的【系统设置】--&gt;
 
 ```
 -- Http Headers --
-Authorization: Bearer [accessToken]
+Authorization: Bearer accessToken
 ```
 
 #### 接口调用请求说明
@@ -30,7 +30,7 @@ Authorization: Bearer [accessToken]
 -- HTTPS POST --
 https://openapi.gzlle.com/token
 
-{"grantType":"client_credentials","appKey":"[appKey]","appSecret":"[appSecret]"}
+{"grantType":"client_credentials","appKey":"appKey","appSecret":"appSecret"}
 ```
 
 **参数说明**
@@ -45,7 +45,7 @@ https://openapi.gzlle.com/token
 
 正常情况下，API会返回下述JSON数据包：
 
-`{"accessToken":"[ACCESS_TOKEN]","expiresIn":7200}`
+`{"accessToken":"`accessToken`","expiresIn":7200}`
 
 **响应参数**
 
