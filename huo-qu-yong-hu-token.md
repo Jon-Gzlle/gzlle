@@ -1,4 +1,4 @@
-### 获取自由职业者签约token
+### 获取自由职业者签约userToken
 
 ---
 
@@ -8,7 +8,7 @@
 
 **请求URL：**
 
-* /contracts/employees/token/{employeeId}
+* /contracts/employees/userToken/{employeeId}
 
 **请求方式：**
 
