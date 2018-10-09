@@ -48,7 +48,7 @@ Authorization: Bearer [accessToken]
 
 | 参数 | 类型 | 说明 |
 | :--- | :--- | :--- |
-| userToken | string | 企业自由职业者，进行页面签署时，需要携带的授权token，该token为用户级token |
+| userToken | string | 企业自由职业者，进行页面签署时，需要携带的授权userToken |
 | expiresIn | string | token有效时间 |
 
 
