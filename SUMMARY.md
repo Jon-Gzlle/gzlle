@@ -4,6 +4,7 @@
 * [参数规定](ji-chu/can-shu-gui-ding.md)
 * [安全规范](ji-chu/an-quan-gui-fan.md)
 * [获取accessToken](ji-chu/jie-kou-gui-fan.md)
+* [支持银行](ji-chu/zhi-chi-de-yin-xing-lie-biao.md)
 
 ## 一 业务签约
 
@@ -13,5 +14,4 @@
 * [1.4 页面签约跳转](14-ye-mian-qian-yue-tiao-zhuan.md)
 * [1.5 查询签约结果](ye-wu-qian-yue/cha-xun-qian-yue-jie-guo.md)
 * [1.6 回调签约结果](ye-wu-qian-yue/hui-diao-qian-yue-jie-guo.md)
-* [1.4 支持银行](ye-wu-qian-yue/zhi-chi-de-yin-xing-lie-biao.md)
 

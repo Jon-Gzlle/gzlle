@@ -37,7 +37,7 @@ https://openapi.gzlle.com/token
 
 | 参数 | 类型 | 是否必填 | 说明 |
 | :--- | :--- | :--- | :--- |
-| grantType | string | 是 | 填写client\_credential |
+| grantType | string | 是 | 填写client\_credentials |
 | appkey | string | 是 | API使用者身份凭证，即AppKey |
 | appSecret | string | 是 | API使用者凭证密钥，即AppSecret |
 

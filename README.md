@@ -52,10 +52,9 @@ Gzlle API接口在访问的过程中需要使用签名算法来保障API交互�
 #### 环境
 
 版本：`v1.0`  
-正式：`https://openapi.gzlle.com`  
-沙箱：`https://openapi-dev.gzlle.com`
+正式：`https://openapi.gzlle.com`
 
-AppKey 分为 正式 和 沙箱 两种模式。分别对应真实交易环境和沙箱开发测试交易环境并且可以实时切换。测试模式下的API会模拟交易等请求，但是不会产生任何真实交易行为和费用，便于调试和接入。 所有的 API 请求必须通过 HTTPS 发送，使用 HTTP 会被 Gzlle API服务器拒绝。
+所有的 API 请求必须通过 HTTPS 发送，使用 HTTP 会被 Gzlle API服务器拒绝。
 
 #### 错误
 
