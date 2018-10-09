@@ -24,17 +24,22 @@
 
 | 参数名 | 类型 | 说明 |
 | :--- | :--- | --- |
-| success | boolean | 请求结果，true：成功；false：失败 |
-| errorCode | string | 错误码 |
-| errorMsg | string | 失败原因 |
 | status | int | 0未签 1已签 2签署中 |
 
 **返回示例**
 
 ```
+成功示例:
+
  {
     “status”：1
  }
+ 
+失败示例:
+{
+    "error": "BadRequest",
+    "message": "accessToken无效"
+}
 ```
 
 **备注**
