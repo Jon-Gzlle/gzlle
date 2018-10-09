@@ -21,7 +21,7 @@
 | 参数 | 类型 | 是否必须 | 说明 |
 | :--- | :--- | :--- | :--- |
 | name | string | 是 | 姓名 |
-| phone | string | 是 | 登记手机号,系统将以手机号码作为用户唯一标识。 |
+| phone | string | 是 | 登记手机号,系统将以手机号码和姓名作为用户唯一标识。 |
 | papersType | int | 否 | 证件类型 0:身份证 |
 | papersNo | string | 否 | 证件号码 |
 | bankCardNo | string | 否 | 银行卡号 |
