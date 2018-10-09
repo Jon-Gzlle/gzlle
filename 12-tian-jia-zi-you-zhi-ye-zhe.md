@@ -6,6 +6,12 @@
 
 * 添加自由职业者，企业在引导自由职业者签约之前，需要将自由职业者信息添加到工资来了平台。当用户重复时，系统会默认返回已经重复的自由职业者id.
 
+**请求头参数：**
+
+```
+Authorization: Bearer [accessToken]
+```
+
 **请求URL：**
 
 * /contracts/employees/add

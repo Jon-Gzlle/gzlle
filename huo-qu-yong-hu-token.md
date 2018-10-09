@@ -6,6 +6,12 @@
 
 * 自由职业者进行电签时, 需要跳转至 工资来了 平台进行电签, 该接口获取用户临时访问token
 
+**请求头参数：**
+
+```
+Authorization: Bearer [accessToken]
+```
+
 **请求URL：**
 
 * /contracts/employees/userToken/{employeeId}

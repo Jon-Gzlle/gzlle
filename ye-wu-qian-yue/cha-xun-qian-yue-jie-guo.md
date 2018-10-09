@@ -6,6 +6,12 @@
 
 * 员工电签状态查询
 
+**请求头参数：**
+
+```
+Authorization: Bearer [accessToken]
+```
+
 **请求URL：**
 
 * /contracts/employees/status/{employeeId}
