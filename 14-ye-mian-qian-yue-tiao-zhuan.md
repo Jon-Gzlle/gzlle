@@ -25,7 +25,7 @@
 | employeeId | string | 是 | 用户Id, 添加自由职业者接口返回 |
 | corpId | string | 是 | 企业Id,在获取appKey的邮件里有提供. |
 | userToken | string | 是 | 自由职业者电签临时授权token, 由 [1.3获取用户token](/huo-qu-yong-hu-token.md) 接口获取. |
-| callbackUrl | string | 否 | 需要对url进行url\_encode转码.当自由职业者签署完成后,前端会回跳至该链接. |
+| callbackUrl | string | 否 | 需要对callbackUrl进行url\_encode转码.当自由职业者签署完成后,前端会回跳至该链接. |
 
 
 
