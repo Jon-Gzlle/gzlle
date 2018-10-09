@@ -22,7 +22,7 @@
 | corpId | 是 | string | 企业id |
 | noticeType | 是 | string | 回调通知类型,1业务签约 |
 | content | 否 | string | 回调说明 |
-| extra | 否 | string | 附言参数，由传入方提供，回调时将原样返还，可以用来做用户数据标识 |
+| data | 否 | string | 附言参数，由传入方提供，回调时将原样返还，可以用来做用户数据标识 |
 
 **返回参数说明**
 
