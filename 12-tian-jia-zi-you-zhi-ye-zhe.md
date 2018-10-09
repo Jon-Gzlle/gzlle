@@ -22,7 +22,7 @@
 | :--- | :--- | :--- | :--- |
 | name | string | 是 | 姓名 |
 | phone | string | 是 | 登记手机号,系统将以手机号码作为用户唯一标识。 |
-| papersType | int | 否 | 证件类型 1:身份证 |
+| papersType | int | 否 | 证件类型 0:身份证 |
 | papersNo | string | 否 | 证件号码 |
 | bankCardNo | string | 否 | 银行卡号 |
 | bankPhone | string | 否 | 银行预留手机号 |
