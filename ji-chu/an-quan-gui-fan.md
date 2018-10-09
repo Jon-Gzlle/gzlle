@@ -33,7 +33,7 @@ nonce_str：ibuaiVcKdpRxkhJA
 stringA="appid=wxd930ea5d5a258f4f&content={"button":[{"action":"HFCZ"},{"action":"KDTC"}]}&device_info=1000&money=10000100&nonce_str=ibuaiVcKdpRxkhJA"
 ```
 
-**2.拼接KEY值**，在stringA最后拼接上key得到stringSignTemp字符串，注意key为商户平台设置的密钥AppKey。
+**2.拼接KEY值**，在stringA最后拼接上key得到stringSignTemp字符串，注意key为SAAS开发者信息分配的AppKey。
 
 ```
 stringSignTemp="appid=wxd930ea5d5a258f4f&content={"button":[{"action":"HFCZ"},{"action":"KDTC"}]}&device_info=1000&mch_id=10000100&nonce_str=ibuaiVcKdpRxkhJA&key=192006250b4c09247ec02edce69f6a2d"
