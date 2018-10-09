@@ -27,7 +27,7 @@
 ```
 成功示例
 {
-    "accessToken":"[ACCESS_TOKEN]",
+    "userToken":"[ACCESS_TOKEN]",
     "expiresIn":7200
 }
 
