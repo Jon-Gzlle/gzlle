@@ -10,7 +10,7 @@
 
 * [1.1 接入指南](ye-wu-qian-yue/jie-ru-zhi-nan.md)
 * [1.2 添加自由职业者](12-tian-jia-zi-you-zhi-ye-zhe.md)
-* [1.3 获取用户userToken](huo-qu-yong-hu-token.md)
+* [1.3 获取用户token](huo-qu-yong-hu-token.md)
 * [1.4 页面签约跳转](14-ye-mian-qian-yue-tiao-zhuan.md)
 * [1.5 查询签约结果](ye-wu-qian-yue/cha-xun-qian-yue-jie-guo.md)
 * [1.6 回调签约结果](ye-wu-qian-yue/hui-diao-qian-yue-jie-guo.md)
