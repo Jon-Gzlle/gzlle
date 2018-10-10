@@ -8,7 +8,7 @@
 
 **跳转URL：**
 
-* [https://webapp.gzlle.com/contract-open/spa.html](https://webapp.gzlle.com/contract-open/spa.html)
+* https://webapp.gzlle.com/contract-open/spa.html
 
 **请求方式：**
 
@@ -16,7 +16,7 @@
 
 **完整跳转URL示例：**
 
-* [https://webapp.gzlle.com/contract-open/spa.html?employeeId=111&corpId=222&userToken=333&callbackUrl=http%3A%2F%2Fwww.baidu.com](https://webapp.gzlle.com/contract-open/spa.html?employeeId=111&corpId=222&token=333&callbackUrl=http%3A%2F%2Fwww.baidu.com#contract_sign_page)
+* https://webapp.gzlle.com/contract-open/spa.html?employeeId=111&corpId=222&userToken=333&callbackUrl=http%3A%2F%2Fwww.baidu.com
 
 **请求参数说明：**
 
