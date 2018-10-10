@@ -28,6 +28,20 @@
 
 **请求参数示例：**
 
+```
+{
+	"noticeType": 1,
+	"corpId": "aaa",
+	"data": {
+		"employeeId": "xxxx",
+		"extra": "extra",
+		"contractStatus": 1
+	},
+	"nonce": "5f0981ee-1d2f-438d-8c49-8c22c4fff507",
+	"sign": "D25E6874714F14DE680BC452BC6ADD20FB68E12FB86BC4DE5F1D979276DD415B"
+}
+```
+
 **返回参数说明**
 
 请返回json格式的任何结果，表明已成功接收
