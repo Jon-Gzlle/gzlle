@@ -24,7 +24,9 @@
 | content | 否 | string | 回调说明 |
 | nonce | 是 | string | 校验用的随机校验码 |
 | sign | 是 | string | 校验用的签名值 |
-| data | 是 | string | 回调数据内容 |
+| contractStatus | 是 | int | 合同签署状态,0未签署,1已签署,2/3签署中,9作废 |
+| employeeId | 是 | string | 自由职业者唯一id |
+| extra | 否 | string | 自由职业者添加时,调用方传入的extra参数值 |
 
 **请求参数示例：**
 
