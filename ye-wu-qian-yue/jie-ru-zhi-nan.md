@@ -25,6 +25,10 @@
 
 企业可以将Gzlle.com定制生成的电子合同链接地址嵌入到自有的产品流程中，传入电子合同所需参数，直接进入合同信息采集页面，员工确认无误后，进行合同签署。
 
+**后端接口Postman请求示例**
+
+企业可以通过Postman导入后端api请求示例, [点击下载Postman collection](https://imagine-1254268680.cos.ap-shanghai.myqcloud.com/openapi/openapi.gzlle.com.postman_collection)。
+
 **对接流程图：**![](/assets/import1.png)
 
 **业务签约接口调用流程：**![](/assets/业务签约接入流程 %281%29.png)
