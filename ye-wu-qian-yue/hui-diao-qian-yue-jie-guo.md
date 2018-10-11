@@ -20,7 +20,7 @@
 | 参数名 | 必选 | 类型 | 说明 |
 | :--- | :--- | :--- | --- |
 | corpId | 是 | string | 企业id |
-| noticeType | 是 | string | 回调通知类型,1业务签约 |
+| noticeType | 是 | int | 回调通知类型,1业务签约 |
 | content | 否 | string | 回调说明 |
 | nonce | 是 | string | 校验用的随机校验码 |
 | sign | 是 | string | 校验用的签名值 |
