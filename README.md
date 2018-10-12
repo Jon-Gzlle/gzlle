@@ -56,6 +56,12 @@ Gzlle API接口在访问的过程中需要使用签名算法来保障API交互�
 
 所有的 API 请求必须通过 HTTPS 发送，使用 HTTP 会被 Gzlle API服务器拒绝。
 
+#### API请求示例
+
+api请求示例,详情见工资来了open-api示例工程 
+
+https://github.com/Gzlle-com/open-api-demo
+
 #### 错误
 
 Gzlle API 使用 HTTP 状态码 \(status code\) 来表明一个 API 请求的成功或失败状态。返回 HTTP 2XX 表明 API 请求成功。返回 HTTP 4XX 表明在请求 API 时提供了错误信息，例如参数缺失、参数错误、支付渠道错误等。返回 HTTP 5XX 表明 API 请求时，Gzlle API 服务器发生了错误。
