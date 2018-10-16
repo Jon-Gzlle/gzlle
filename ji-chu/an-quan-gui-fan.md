@@ -58,7 +58,11 @@ signValue=hash_hmac("sha256",stringSignTemp,key).toUpperCase()="6A9AE1657590FD62
 }
 ```
 
-**生成随机数算法**  
+**5.签名验证工具**
+
+[点击打开签名在线校验工具](https://open.gzlle.com/api/doc/sign-tool/)
+
+**6.生成随机数算法**  
 微信支付API接口协议中包含字段nonce字符串，主要保证签名不可预测。我们推荐生成随机数算法如下：调用随机数函数生成，将得到的值转换为字符串。
 
 随机数算法举例，各语言平台可以自行设计随机数算法：
@@ -76,10 +80,6 @@ public static String buildNonce(int length)
     return nonce;
 }
 ```
-
-**5.签名验证工具**
-
-[点击打开签名在线校验工具](https://open.gzlle.com/api/doc/sign-tool/)
 
 
 
