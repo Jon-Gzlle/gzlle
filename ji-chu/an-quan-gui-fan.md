@@ -77,5 +77,7 @@ public static String buildNonce(int length)
 }
 ```
 
+**5.签名验证工具**
 
+[点击打开签名在线校验工具](https://open.gzlle.com/api/doc/sign-tool/)
 
