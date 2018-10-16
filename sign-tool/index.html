@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+  <meta charset="UTF-8">
+  <title>签名校验</title>
+  <link rel="stylesheet" href="./src/css/main.css">
+</head>
+<body>
+<div class="container warp">
+  <div class="content-head">
+    <h2 class="bottom-border">接口签名校验工具</h2>
+  </div>
+  <div class="content-body f-14">
+    <div class="mb-10">此工具旨在帮助开发者检测调用【工资来了open API】时发送的请求参数中生成的签名是否正确，提交相关信息后可获得签名校验结果</div>
+    <ol class="manual mb10">
+      <li><b>使用说明：</b></li>
+      <li>（1）选择签名类型：HMAC-SHA256</li>
+      <div class="message"><!-- 左边带标题 with-title -->
+        <p>（2）</p>
+        <p>根据选择的校验方式填入对应的的参数值</p>
+      </div>
+      <li>（3）点'生成签名'会按规则生成对应的sign签名字段及提供详细的生成签名过程</li>
+    </ol>
+    <ol class="manual mb10">
+      <li><b>注意事项：</b></li>
+      <li class="red">（1）
+        <strong>本工具只校验签名算法是否正确，无法校验企业用户KEY是否正确，如通过本工具校验通过，但实际接口返回签名失败，请检查：<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1，当前企业开发者KEY是否正确<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2，加入签名的参数是否和接口提交的参数个数一致，字段名是否和接口文档一致
+        </strong>
+      </li>
+      <li class="red">（2）
+        <strong>注意参数名需区分大小写，必须与文档的参数名大小写一致</strong>
+      </li>
+      <li class="red">（3）
+        <strong>暂不支持IE浏览器</strong>
+      </li>
+    </ol>
+    <!--表单-->
+    <form id="form1" class="form">
+      <div class="form-item">
+        <label class="label">签名类型：</label>
+        <div class="txt">
+          <input type="radio" value="0" checked="checked" name="signType">MD5&nbsp;&nbsp;
+          <input type="radio" value="1" name="signType">HMAC-SHA256
+        </div>
+      </div>
+      <div class="form-item">
+        <div class="txt">
+          <input type="button" class="btn btn-default" value="增加参数" onclick="handleAddElement()">
+          <input type="button" class="btn btn-primary" value="生成签名" onclick="handleFormSubmit(event)">
+        </div>
+      </div>
+      <!--表单行分割线-->
+      <div class="form-group">
+        <div class="form-item">
+          <label class="label">参数名称：</label>
+          <div class="txt">
+            <span class="inner">
+              <input type="text" name="pName_1" placeholder="输入参数名称" autocomplete="off">
+            </span>
+          </div>
+        </div>
+        <div class="form-item">
+          <label class="label">参数值：</label>
+          <div class="txt">
+            <span class="inner">
+              <input type="text" name="pValue_1" placeholder="输入参数值" autocomplete="off">
+            </span>
+          </div>
+        </div>
+        <div class="form-item small">
+          <a href="javascript:void(0)" onclick="handleDel(this, event)">删除</a>
+        </div>
+      </div>
+      <!--表单行分割线-->
+      <div class="form-group">
+        <div class="form-item">
+          <label class="label">参数名称：</label>
+          <div class="txt">
+            <span class="inner">
+              <input type="text" name="pName_2" placeholder="输入参数名称" autocomplete="off">
+            </span>
+          </div>
+        </div>
+        <div class="form-item">
+          <label class="label">参数值：</label>
+          <div class="txt">
+            <span class="inner">
+              <input type="text" name="pValue_2" placeholder="输入参数值" autocomplete="off">
+            </span>
+          </div>
+        </div>
+        <div class="form-item small">
+          <a href="javascript:void(0)" onclick="handleDel(this, event)">删除</a>
+        </div>
+      </div>
+      <!--表单行分割线-->
+    </form>
+    <form id="form2" class="form" style="margin-top: 0px;">
+      <div class="form-group">
+        <div class="form-item">
+          <label class="label">AppKey：</label>
+          <div class="txt">
+            <span class="inner">
+              <input type="text" name="key" placeholder="AppKey" autocomplete="off">
+            </span>
+          </div>
+        </div>
+        <div class="form-item" style="visibility: hidden;">
+          <label class="label"></label>
+          <div class="txt">
+            <span class="inner"></span>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="form-item">
+          <div class="txt">
+            <input type="button" class="btn btn-default" value="增加参数" onclick="handleAddElement()">
+            <input type="button" class="btn btn-primary" value="生成签名" onclick="handleFormSubmit(event)">
+          </div>
+        </div>
+      </div>
+    </form>
+    <div class="guide">
+      <div id="guide" style="display: none;">
+        <div class="break-word">
+          <b>#1.对参数按照key=value的格式，并按照参数名ASCII字典序排序生成字符串：</b>
+        </div>
+        <div id="p1" class="break-word"></div>
+        <br>
+        <div class="break-word">
+          <b>#2.连接商户key：</b>
+        </div>
+        <div id="p2" class="break-word"></div>
+        <br>
+        <div class="break-word">
+          <b>#3.</b><b id="t3"></b>
+        </div>
+        <div id="p3" class="break-word"></div>
+        <br>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="./src/js/jquery-2.1.1.min.js"></script>
+<script src="./src/js/hmac-sha256.js"></script>
+<script src="./src/js/md5.js"></script>
+<script src="./src/js/main.js"></script>
+</body>
+</html>
