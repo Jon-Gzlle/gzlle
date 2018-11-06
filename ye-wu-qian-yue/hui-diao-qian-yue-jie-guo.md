@@ -27,6 +27,12 @@
 | contractStatus | 是 | int | 合同签署状态,0未签署,1已签署,2/3签署中,9作废 |
 | employeeId | 是 | string | 自由职业者唯一id |
 | extra | 否 | string | 自由职业者添加时,调用方传入的extra参数值 |
+| name | 否 | string | 自由职业者姓名 |
+| phone | 否 | string | 手机号码 |
+| papersType | 否 | int | 证件类型,0身份证 |
+| papersNo | 否 | string | 证件号码 |
+| bankCardNo | 否 | string | 银行卡号 |
+| employeeNo | 否 | string | 编号,企业添加时传入的值 |
 
 **请求参数示例：**
 
@@ -38,7 +44,13 @@
     "extra": "extra",
     "contractStatus": 1,
     "nonce": "5f0981ee-1d2f-438d-8c49-8c22c4fff507",
-    "sign": "D25E6874714F14DE680BC452BC6ADD20FB68E12FB86BC4DE5F1D979276DD415B"
+    "sign": "D25E6874714F14DE680BC452BC6ADD20FB68E12FB86BC4DE5F1D979276DD415B",
+    "name":"姓名",
+    "phone":"手机",
+    "papersType":0,
+    "papersNo":"身份证号码",
+    "bankCardNo":"银行卡号",
+    "employeeNo":"自由职业者在企业编号"
 }
 ```
 
