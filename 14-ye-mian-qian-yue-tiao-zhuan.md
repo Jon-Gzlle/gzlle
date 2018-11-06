@@ -34,7 +34,7 @@
 
 **完整回跳URL示例：**
 
-* [https://www.贵公司网址.com/?v=1&name=龙武军&employeeId=123456☎=18888888888&papersType=0&papersNo=430221198810108888&bankCardNo=6222222222222222](https://www.贵公司网址.com/?v=1&name=龙武军&employeeId=123456&phone=18888888888&papersType=0&papersNo=430221198810108888&bankCardNo=6222222222222222)
+* https://www.贵公司网址.com/?v=1&name=龙武军&employeeId=123456&phone=18888888888&papersType=0&papersNo=430221198810108888&bankCardNo=6222222222222222
 
 **回传参数说明：**
 
@@ -50,8 +50,6 @@
 | papersNo | string | 否 | 证件号码 |
 | bankCardNo | string | 否 | 银行卡号 |
 | employeeNo | string | 否 | 编号,企业添加时传入的值 |
-
-
 
 
 
