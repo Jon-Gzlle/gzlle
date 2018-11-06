@@ -24,7 +24,7 @@ Authorization: Bearer [accessToken]
 
 | 参数名 | 必选 | 类型 | 说明 |
 | :--- | :--- | :--- | --- |
-| employeeId | 是 | string | 自然人id,在下单接口中获取 |
+| employeeId | 是 | string | 自由职业者唯一id,在添加自由职业者接口中获取 |
 
 **返回参数说明**
 
