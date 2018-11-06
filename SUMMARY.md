@@ -14,4 +14,5 @@
 * [1.4 页面签约跳转](14-ye-mian-qian-yue-tiao-zhuan.md)
 * [1.5 查询签约结果](ye-wu-qian-yue/cha-xun-qian-yue-jie-guo.md)
 * [1.6 回调签约结果](ye-wu-qian-yue/hui-diao-qian-yue-jie-guo.md)
+* [1.7 获取自由职业者信息](ye-wu-qian-yue/17-huo-qu-zi-you-zhi-ye-zhe-xin-xi.md)
 
