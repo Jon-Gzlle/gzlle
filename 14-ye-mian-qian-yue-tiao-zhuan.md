@@ -29,3 +29,26 @@
 
 
 
+**回调方式：**
+
+* GET 
+
+**完整回跳URL示例：**
+
+* https://www.贵公司网址.com/?v=1&name=%E9%BE%99%E6%AD%A6%E5%86%9B&employeeId=123456&phone=18888888888&papersType=0&papersNo=430221198810108888&bankCardNo=6222222222222222
+
+**回传参数说明：**
+
+| 参数 | 类型 | 是否必须 | 说明 |
+| :--- | :--- | :--- | :--- |
+| employeeId | string | 是 | 用户Id, 添加自由职业者接口返回 |
+| corpId | string | 是 | 企业Id,在获取appKey的邮件里有提供. |
+| userToken | string | 是 | 自由职业者电签临时授权token, 由 [1.3获取用户token](/huo-qu-yong-hu-token.md) 接口获取. |
+| callbackUrl | string | 否 | 需要对callbackUrl进行url\_encode转码.当自由职业者签署完成后,前端会回跳至该链接. |
+
+
+
+
+
+
+
