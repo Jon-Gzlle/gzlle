@@ -8,7 +8,15 @@ Gzlle API 采用 RESTful 风格设计。所有接口请求地址都是可预期�
 
 #### 企业账户申请
 
-尊贵企业客户申请合作成功，“工资来了”（Gzlle.com）平台工作人员审核资料无误后开通相应的API账户权限，企业客户在申请资料填写的邮箱中收取到由“工资来了”小助手\(helper@it.gzlle.com\)发送的邮件，此邮件包含开发时需要使用的账户信息。
+企业和Gzlle.com签订业务合作协议后，开通电子合同接口对接的步骤如下：
+
+1）企业按要求填写企业信息资料表，交给发薪专管员，申请企业SAAS账号。
+
+2）发薪专管员完成配置后，将通知到企业SAAS后台账号密码。
+
+3）企业SAAS管理员，登录系统进入【系统设置】-&gt;【公司配置】，设置企业联系人邮箱\(用于接收appKey,appSecret等信息\)。
+
+4）企业开发者可以登录【系统设置】-&gt;【公司配置】-&gt;【开发者配置】-&gt; 初始化开发者信息，开发者信息初始化成功后，系统会以邮件形式将appKey,appSecret等信息发送至企业联系人邮箱。
 
 邮件中提供的账户在API接口中的参数说明如下：
 
@@ -58,9 +66,9 @@ Gzlle API接口在访问的过程中需要使用签名算法来保障API交互�
 
 #### API请求示例
 
-api请求示例,详情见工资来了open-api示例工程 
+api请求示例,详情见工资来了open-api示例工程
 
-https://github.com/Gzlle-com/open-api-demo
+[https://github.com/Gzlle-com/open-api-demo](https://github.com/Gzlle-com/open-api-demo)
 
 #### 错误
 
