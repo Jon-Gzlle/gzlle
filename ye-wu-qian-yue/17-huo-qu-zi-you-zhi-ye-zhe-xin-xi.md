@@ -28,18 +28,37 @@ Authorization: Bearer [accessToken]
 
 **返回参数说明**
 
-| 参数名 | 类型 | 说明 |
-| :--- | :--- | --- |
-| status | int | 0未签 1已签 2签署中 |
+| 参数 | 类型 | 是否必须 | 说明 |
+| :--- | :--- | :--- | :--- |
+| id | string | 是 | employeeId |
+| name | string | 是 | 姓名 |
+| phone | string | 是 | 登记手机号 |
+| papersType | int | 否 | 证件类型 0:身份证 |
+| papersNo | string | 否 | 证件号码 |
+| bankCardNo | string | 否 | 银行卡号 |
+| bankPhone | string | 否 | 银行预留手机号 |
+| employeeNo | string | 否 | 自由职业者在企业编号 |
+| extra | string | 否 | 扩展参数 |
+| contractStatus | int | 是 | 0未签 1已签 2/3签署中 |
 
 **返回示例**
 
 ```
 成功示例:
 
- {
-    “status”：1
- }
+{
+    "id": "228173079619043328",
+    "name": "姓名",
+    "phone": "手机",
+    "papersType": 0,
+    "papersNo": "身份证号码",
+    "bankCardNo": "银行卡号码",
+    "bankPhone": "银行预留手机号码",
+    "employeeNo": "自由职业者企业编号",
+    "extra": "extra",
+    "contractStatus": 1,
+    "contractTime": "签约时间"
+}
 
 失败示例:
 {
