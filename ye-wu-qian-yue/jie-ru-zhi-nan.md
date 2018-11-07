@@ -27,7 +27,7 @@
 
 **后端接口Postman请求示例**
 
-企业可以通过Postman导入后端api请求示例, [点击下载Postman collection](https://imagine-1254268680.cos.ap-shanghai.myqcloud.com/openapi/openapi.gzlle.com.postman_collection)。
+企业可以通过Postman导入后端api请求示例, [点击下载Postman collection](https://imagine-1254268680.cos.ap-shanghai.myqcloud.com/openapi/openapi.gzlle.com-v1.1.postman_collection)。
 
 **对接流程图：**![](/assets/import1.png)
 
