@@ -14,7 +14,7 @@ Authorization: Bearer [accessToken]
 
 **请求URL：**
 
-* /contracts/employees/get/{employeeId}
+* /contracts/get/{employeeId}
 
 **请求方式：**
 
