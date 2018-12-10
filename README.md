@@ -2,7 +2,7 @@
 
 ---
 
-##### “工资来了”\(Gzlle.com\)-智能薪酬云服务平台由深圳市联讯惠通科技有限公司研发的互联网+新型人力资源增值服务的生态平台。
+##### “职乐企服”\(Gzlle.com\)-智能薪酬云服务平台由深圳市联讯惠通科技有限公司研发的互联网+新型人力资源增值服务的生态平台。
 
 Gzlle API 采用 RESTful 风格设计。所有接口请求地址都是可预期的以及面向资源的。使用规范的 HTTP 响应代码来表示请求结果的正确或错误信息。使用 HTTP 内置的特性，如 HTTP Authentication 和 HTTP 请求方法让接口易于理解。所有的 API 请求都会以规范友好的 JSON 对象格式返回（包括错误信息）
 
@@ -66,7 +66,7 @@ Gzlle API接口在访问的过程中需要使用签名算法来保障API交互�
 
 #### API请求示例
 
-api请求示例,详情见工资来了open-api示例工程
+api请求示例,详情见职乐企服open-api示例工程
 
 [https://github.com/Gzlle-com/open-api-demo](https://github.com/Gzlle-com/open-api-demo)
 
